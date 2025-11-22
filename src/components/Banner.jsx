@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/Banner.css";
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import Button from '../components/Button';
 
 export default function Banner() {
   return (
     <section className="banner-root" aria-labelledby="banner-heading">
-      {/* Decorative SVG blobs */}
       <svg className="blob blob-1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden>
         <g transform="translate(300,300)">
           <path d="M120 -178C162 -145 193 -108 214 -62C236 -16 247 38 227 85C207 132 156 171 103 192C50 214 -6 218 -58 199C-110 180 -158 138 -190 86C-221 34 -236 -31 -217 -84C-198 -137 -145 -176 -94 -204C-43 -231 6 -247 59 -247C112 -247 78 -211 120 -178Z" />
@@ -60,7 +60,8 @@ export default function Banner() {
             </ul>
 
             <div className="cta-row">
-              <button className="btn-primary">Create a Poll</button>
+              {/* <button className="btn-primary">Create a Poll</button> */}
+              <Button variant="tertiary">Create a Poll</Button>
             </div>
           </div>
 
@@ -105,12 +106,6 @@ export default function Banner() {
           </aside>
         </main>
 
-        {/* <footer className="banner-footer">
-          <p className="footer-note">Secure • Lightweight • Privacy-first</p>
-          <div className="corner-cta">
-            <button className="btn-small">Join a Group</button>
-          </div>
-        </footer> */}
       </div>
       <Footer/>
     </section>

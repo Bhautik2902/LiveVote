@@ -1,32 +1,34 @@
-// Header.jsx
+import {React, useState} from 'react';
 import "../styles/Header.css";
-import Button from "./Button";
+import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({signupHandler, loginHandler}) => {
   const navigate = useNavigate();
 
   return (
-    <header className="neo-header">
-      <div
-        className="neo-title"
-        onClick={() => navigate("/")}
-        role="button"
-        tabIndex={0}
-      >
-        <span className="neo-logo">🗳️</span>
-        <h1 className="neo-appname">LiveVote</h1>
-      </div>
+    <div>
+        <header className="neo-header">
+          <div
+            className="neo-title"
+            onClick={() => navigate("/")}
+            role="button"
+            tabIndex={0}
+          >
+            <span className="neo-logo">🗳️</span>
+            <h1 className="neo-appname">LiveVote</h1>
+          </div>
 
-      <div className="neo-actions">
-        <Button onClick={() => navigate("/login")} variant="secondary">
-          Login
-        </Button>
-        <Button onClick={() => navigate("/signup")} variant="primary">
-          Sign Up
-        </Button>
-      </div>
-    </header>
+          <div className="neo-actions">
+            <Button onClick={loginHandler} variant="secondary">
+              Login
+            </Button>
+            <Button onClick={signupHandler} variant="primary">
+              Sign Up
+            </Button>
+          </div>
+        </header>
+    </div>
   );
 };
 

@@ -42,8 +42,8 @@
   box-shadow: 0 4px 12px rgba(90, 168, 255, 0.25);
 }
 
-     /* TERNARY BUTTON */
-.neo-button--ternary {
+     /* TERTIARY BUTTON */
+.neo-button--tertiary {
   background: linear-gradient(90deg, var(--accent-1), #7b8dff);
   color: white;
   padding: 10px 16px;
@@ -53,11 +53,11 @@
   font-weight: 700;
   box-shadow: 0 10px 30px rgba(108,123,255,0.14);
 }
-.neo-button--ternary:hover { transform: translateY(-2px); }
+.neo-button--tertiary:hover { transform: translateY(-2px); }
 
 
    /* GHOST BUTTON */
-.btn-ghost {
+.neo-button--btn-ghost {
   background: transparent;
   border: 1px solid rgba(15,23,42,0.06);
   padding: 10px 14px;
