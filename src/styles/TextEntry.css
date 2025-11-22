@@ -1,0 +1,35 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.input__required {
+  color: #dc2626;
+  margin-left: 4px;
+}
+
+.input__field {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  background-color: white;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.input__field:focus {
+  outline: none;
+  border-color: var(--gray-600);
+}
+
+.input__field::placeholder {
+  color: var(--gray-400);
+}

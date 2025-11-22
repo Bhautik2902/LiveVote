@@ -1,0 +1,33 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout > .header {
+  flex: 0 0 auto;
+  background: #333;
+  color: #fff;
+  padding: 0.7rem;
+}
+
+.layout__container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.layout__container > .sidebar {
+  flex: 0 0 220px;
+  background: var(--gray-400);
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.layout__container > .content {
+  flex: 1;
+  padding: 0rem;
+  overflow-y: auto;
+  background: #fff;
+}

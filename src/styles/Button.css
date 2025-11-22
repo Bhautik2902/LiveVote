@@ -1,0 +1,76 @@
+
+.neo-button {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+
+  letter-spacing: 0.5px;
+
+  transition: all 0.22s ease;
+  user-select: none;
+}
+
+   /* PRIMARY BUTTON */
+.neo-button--primary {
+  background: linear-gradient(90deg, #5aa8ff, #3ee0c5);
+  color: #ffffff;
+
+  box-shadow: 0 4px 12px rgba(94, 234, 212, 0.25),
+              0 0 8px rgba(90, 168, 255, 0.35);
+}
+
+.neo-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(94, 234, 212, 0.35),
+              0 0 12px rgba(90, 168, 255, 0.5);
+  opacity: 0.95;
+}
+
+   /* SECONDARY BUTTON */
+.neo-button--secondary {
+  background: transparent;
+  border: 2px solid #5aa8ff;
+  color: #5aa8ff;
+}
+
+.neo-button--secondary:hover {
+  background: rgba(90, 168, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(90, 168, 255, 0.25);
+}
+
+     /* TERNARY BUTTON */
+.neo-button--ternary {
+  background: linear-gradient(90deg, var(--accent-1), #7b8dff);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(108,123,255,0.14);
+}
+.neo-button--ternary:hover { transform: translateY(-2px); }
+
+
+   /* GHOST BUTTON */
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(15,23,42,0.06);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #071237;
+  font-weight: 600;
+}
+
+/* Mobile scaling */
+@media (max-width: 500px) {
+  .neo-button {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+}

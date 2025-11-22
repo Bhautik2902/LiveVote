@@ -1,0 +1,22 @@
+.form-card {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.form-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 20px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.form-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
