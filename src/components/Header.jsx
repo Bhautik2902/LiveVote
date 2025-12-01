@@ -3,7 +3,7 @@ import "../styles/Header.css";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({signupHandler, loginHandler}) => {
+const Header = ({signupHandler, loginHandler, isLoggedIn}) => {
   const navigate = useNavigate();
 
   return (
@@ -19,14 +19,16 @@ const Header = ({signupHandler, loginHandler}) => {
             <h1 className="neo-appname">LiveVote</h1>
           </div>
 
-          <div className="neo-actions">
-            <Button onClick={loginHandler} variant="secondary">
-              Login
-            </Button>
-            <Button onClick={signupHandler} variant="primary">
-              Sign Up
-            </Button>
-          </div>
+          { isLoggedIn &&
+            <div className="neo-actions">
+              <Button onClick={loginHandler} variant="secondary">
+                Login
+              </Button>
+              <Button onClick={signupHandler} variant="primary">
+                Sign Up
+              </Button>
+            </div>
+          }
         </header>
     </div>
   );

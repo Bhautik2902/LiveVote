@@ -4,13 +4,13 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import { Outlet } from 'react-router-dom';
 
-const Layout = ({ children }) => {
+const Layout = () => {
 
   return (
     <div className="layout">
-      <Header />
+      <Header isLoggedIn={true}/>
       <div className="layout__container">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <main className='content'>
           <Outlet/>
         </main>

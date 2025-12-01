@@ -4,13 +4,13 @@ import Button from "../components/Button";
 import TextEntry from "../components/TextEntry";
 
 export default function LoginForm({ open, onClose, onSubmit, statusMessage }) {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (!open) {
-      setUsername("");
+      setEmail("");
       setPassword("");
       setErrors({});
     }
@@ -21,13 +21,13 @@ export default function LoginForm({ open, onClose, onSubmit, statusMessage }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = {};
-    if (!username.trim()) newErrors.username = "Username is required.";
+    if (!email.trim()) newErrors.username = "Email is required.";
     if (!password) newErrors.password = "Password is required.";
 
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      onSubmit?.({ username, password });
+      onSubmit?.({ email, password });
     }
   };
 
@@ -45,14 +45,14 @@ export default function LoginForm({ open, onClose, onSubmit, statusMessage }) {
 
         <form className="login-form" onSubmit={handleSubmit}>
           <TextEntry
-            label="Username"
-            name="username"
-            value={username}
-            placeholder="Enter your username"
+            label="Email"
+            name="email"
+            value={email}
+            placeholder="Enter your email"
             required
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          {errors.username && <div className="error-msg">{errors.username}</div>}
+          {errors.email && <div className="error-msg">{errors.email}</div>}
 
           <TextEntry
             label="Password"

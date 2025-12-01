@@ -1,15 +1,23 @@
 import Banner from '../components/Banner';
+import Header from "../components/Header.jsx";
+import SignupForm from "../components/SignupForm.jsx";
+import LoginForm from "../components/LoginForm.jsx";
+import Footer from "../components/Footer.jsx";
+import {React} from "react";
 
-const HomePage = ({ activeTab }) => {
+const HomePage = () => {
 
     return (
         <div>
-            <h2>{activeTab}</h2>
 
-            <Banner 
-                msg="Welcome"
-                description="Manage customer accounts, handle transactions, and perform everyday banking operations with ease."
+            <Banner />
+            <SignupForm
+
             />
+            <LoginForm
+
+            />
+            <Footer/>
         </div>  
     )
 }

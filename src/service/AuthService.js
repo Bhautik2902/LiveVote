@@ -21,6 +21,7 @@ axiosInstance.interceptors.request.use(
 export const authService = {
   
   createUser: async (userData) => {
+    console.log(userData)
     const response = await axiosInstance.post(
         `/signup`, 
         userData,               
@@ -34,6 +35,7 @@ export const authService = {
   },
 
   login: async (loginData) => {
+    console.log(loginData)
     const response = await axiosInstance.post(
         `/login`, 
         loginData,               

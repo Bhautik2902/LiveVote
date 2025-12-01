@@ -5,6 +5,7 @@ import TextEntry from "../components/TextEntry";
 
 const SignupForm = ({ open, onClose, onSubmit }) => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [confirmPwd, setConfirmPwd] = useState("");
   const [errors, setErrors] = useState({});
@@ -13,6 +14,7 @@ const SignupForm = ({ open, onClose, onSubmit }) => {
   useEffect(() => {
     if (!open) {
       setName("");
+      setEmail("");
       setPwd("");
       setConfirmPwd("");
       setErrors({});
@@ -71,6 +73,16 @@ const SignupForm = ({ open, onClose, onSubmit }) => {
             onChange={(e) => setName(e.target.value)}
           />
           {errors.name && <div className="error-msg">{errors.name}</div>}
+
+           <TextEntry
+            label="Email"
+            name="email"
+            type="email"
+            value={email}
+            placeholder="Your email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
           <div>
             <TextEntry

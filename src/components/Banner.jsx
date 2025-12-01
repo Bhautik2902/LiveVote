@@ -1,9 +1,13 @@
 import React from "react";
 import "../styles/Banner.css";
-import Footer from '../components/Footer';
 import Button from '../components/Button';
+import {useNavigate} from "react-router-dom";
+
 
 export default function Banner() {
+
+    const navigate = useNavigate();
+
   return (
     <section className="banner-root" aria-labelledby="banner-heading">
       <svg className="blob blob-1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden>
@@ -61,7 +65,7 @@ export default function Banner() {
 
             <div className="cta-row">
               {/* <button className="btn-primary">Create a Poll</button> */}
-              <Button variant="tertiary">Create a Poll</Button>
+              <Button variant="tertiary" onClick={() => navigate("/createPoll")}>Create a Poll</Button>
             </div>
           </div>
 
@@ -105,9 +109,7 @@ export default function Banner() {
             </div>
           </aside>
         </main>
-
       </div>
-      <Footer/>
     </section>
   );
 }

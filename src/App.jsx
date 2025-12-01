@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
 import LandingPage from "./pages/LandingPage";
+import CreatePollPage from "./pages/PollCreatePage.jsx";
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
         <Route path="/login" element={<LandingPage />} />
 
         <Route element={<Layout />}>   {/* Dashboard Layout */}
-          <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/createPoll" element={<CreatePollPage/>} />
         </Route>
       </Routes>
     </div>
